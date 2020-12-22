@@ -119,8 +119,8 @@ public class PromotionCommunityController {
 		JSONObject jsonObject = new JSONObject();
 		Gson gson= new Gson();
 
-		String fileRoot = "C:\\Users\\YUHAN\\Desktop\\Healthory\\src\\main\\webapp\\resources\\image\\screencommunity\\";
-		String root="/resources/image/screencommunity/";
+		String fileRoot = "C:\\Users\\you\\Desktop\\My_Space\\GitHub\\Healthtory\\Healthory\\src\\main\\webapp\\resources\\image\\promotioncommunity\\";
+		String root="/resources/image/promotioncommunity/";
 		String originalFileName = file.getOriginalFilename();	
 		String extension = originalFileName.substring(originalFileName.lastIndexOf("."));	
 				

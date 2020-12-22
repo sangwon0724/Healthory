@@ -80,7 +80,33 @@
 				<%--DAO, VO 설정 종료 --%>
 				
 				<!-- 데이터 연동 후 사용할 부분 시작 -->
-				<%for(int i=0; i<3; i++){ 
+				<%
+				if(dao.list.size()>=3){
+					for(int i=0; i<3; i++){ 
+						vo = dao.list.get(i);
+					%>
+						<div class="box" onclick="go_screen_view(<%= vo.getNo() %>)">
+							<div class="rank">
+								<span>
+									<%=i+1%>위&nbsp;
+									<i class="fas fa-medal <%if (i==0){out.print("gold");} else if(i==1){out.print("silver");} else if(i==2){out.print("bronze");}%>"></i>
+								</span>
+							</div>
+							<header><span><%= vo.getTitle() %></span></header>
+							<main><img width="100%" height="100%" alt="" src="<%= vo.getSumnail() %>"></main>
+							<footer>
+								<span>
+									<i class="far fa-eye"></i>&nbsp;<%= vo.getViews() %>
+									</span>
+								<span>
+									<i class="far fa-comment-alt"></i>&nbsp;<%--=vo.get댓글수--%>
+								</span>
+							</footer>
+						</div>
+				<%}
+			}
+			else if(dao.list.size()<3 && dao.list.size()>=1){
+				for(int i=0; i<dao.list.size(); i++){ 
 					vo = dao.list.get(i);
 				%>
 					<div class="box" onclick="go_screen_view(<%= vo.getNo() %>)">
@@ -98,10 +124,14 @@
 								</span>
 							<span>
 								<i class="far fa-comment-alt"></i>&nbsp;<%--=vo.get댓글수--%>
-								</span>
+							</span>
 						</footer>
 					</div>
-				<%}%>
+			<%}
+			}
+			if (dao.list.size()==0){%>
+				<span style="text-align:center;">현재 게시글이 없습니다.</span>
+			<%}%>
 				<!-- 데이터 연동 후 사용할 부분 종료 -->
 				</main>
 			</div>
@@ -126,21 +156,45 @@
 			<%--DAO, VO 설정 종료 --%>
 				
 			<!-- 데이터 연동 후 사용할 부분 시작 -->
-			<%for(int i=0; i<3; i++){ 
-				promotionvo = promotiondao.list.get(i);
-				%>
-				<div class="box" onclick="go_promotion_view(<%= promotionvo.getNo() %>)">
-					<header><span><%= promotionvo.getTitle() %></span></header>
-					<main><img width="100%" alt="" src="<%= promotionvo.getSumnail() %>"></main>
-					<footer>
-						<span>
-							<i class="far fa-eye"></i>&nbsp;<%= promotionvo.getViews() %>
-							</span>
-						<span>
-							<i class="far fa-comment-alt"></i>&nbsp;<%--=vo.get댓글수--%>
-							</span>
-					</footer>
-				</div>
+			<%
+			if(promotiondao.list.size()>=3){
+				for(int i=0; i<3; i++){
+					promotionvo = promotiondao.list.get(i);
+					%>
+					<div class="box" onclick="go_promotion_view(<%= promotionvo.getNo() %>)">
+						<header><span><%= promotionvo.getTitle() %></span></header>
+						<main><img width="100%" alt="" src="<%= promotionvo.getSumnail() %>"></main>
+						<footer>
+							<span>
+								<i class="far fa-eye"></i>&nbsp;<%= promotionvo.getViews() %>
+								</span>
+							<span>
+								<i class="far fa-comment-alt"></i>&nbsp;<%--=vo.get댓글수--%>
+								</span>
+						</footer>
+					</div>
+				<%}
+			}
+			else if(promotiondao.list.size()<3 && promotiondao.list.size()>=1){
+				for(int i=0; i<promotiondao.list.size(); i++){
+					promotionvo = promotiondao.list.get(i);
+					%>
+					<div class="box" onclick="go_promotion_view(<%= promotionvo.getNo() %>)">
+						<header><span><%= promotionvo.getTitle() %></span></header>
+						<main><img width="100%" alt="" src="<%= promotionvo.getSumnail() %>"></main>
+						<footer>
+							<span>
+								<i class="far fa-eye"></i>&nbsp;<%= promotionvo.getViews() %>
+								</span>
+							<span>
+								<i class="far fa-comment-alt"></i>&nbsp;<%--=vo.get댓글수--%>
+								</span>
+						</footer>
+					</div>
+				<%}
+			}
+			else if(promotiondao.list.size()==0){%>
+				<span style="text-align:center;">현재 게시글이 없습니다.</span>
 			<%}%>
 			<!-- 데이터 연동 후 사용할 부분 종료 -->
 				</main>
