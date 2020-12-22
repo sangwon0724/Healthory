@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인 | Healthory</title>
+<title>로그인 | Healthtory</title>
 	<link href="${pageContext.request.contextPath}/resources/css/index.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" type="image⁄x-icon" href="${pageContext.request.contextPath}/resources/image/icon/icon.jpg">
 </head>

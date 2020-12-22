@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>닉네임중복체크 | Healthory</title>
+<title>닉네임중복체크 | Healthtory</title>
 </head>
 <body>
 <form name = "form1">

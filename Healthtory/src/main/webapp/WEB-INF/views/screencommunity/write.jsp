@@ -88,7 +88,7 @@ $(document).ready(function() {
 		.note-toolbar>div>div>button>span{color: black;}
 		.note-toolbar>div>button>i{color: black;}
 	</style>
-<title>몸짱 게시판 글쓰기 | Healthory</title>
+<title>몸짱 게시판 글쓰기 | Healthtory</title>
 </head>
 <body>
 	<!-- 네비게이션 시작 -->

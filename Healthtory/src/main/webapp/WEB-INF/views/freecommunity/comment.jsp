@@ -9,7 +9,7 @@
 	<meta charset="UTF-8">
 	<link href="${pageContext.request.contextPath}/resources/css/comment.css" rel="stylesheet">
 	<link rel="shortcut icon" type="image⁄x-icon" href="${pageContext.request.contextPath}/resources/image/icon/icon.jpg">
-	<title>자유게시판 댓글 | Healthory</title>
+	<title>자유게시판 댓글 | Healthtory</title>
 </head>
 <body>
 <% if(session.getAttribute("ID") != null) 

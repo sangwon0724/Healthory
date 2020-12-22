@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>회원가입 | Healthory</title>
+	<title>회원가입 | Healthtory</title>
 	<link href="${pageContext.request.contextPath}/resources/css/index.css" rel="stylesheet" type="text/css">
 </head>
 <body>

@@ -11,7 +11,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>홈 | Healthory</title>
+	<title>홈 | Healthtory</title>
 	<link href="${pageContext.request.contextPath}/resources/css/index.css" rel="stylesheet" type="text/css">
 	<link href="${pageContext.request.contextPath}/resources/css/swiper-bundle.min.css" rel="stylesheet">
 	<link rel="shortcut icon" type="image⁄x-icon" href="${pageContext.request.contextPath}/resources/image/icon/icon.jpg">
