@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>닉네임중복체크 | Healthtory</title>
+	<link rel="shortcut icon" type="image⁄x-icon" href="${pageContext.request.contextPath}/resources/image/icon/icon.jpg">
 </head>
 <body>
 <form name = "form1">
